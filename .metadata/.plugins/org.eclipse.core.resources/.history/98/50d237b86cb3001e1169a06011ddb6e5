@@ -1,0 +1,31 @@
+package com.exception_assignments;
+
+public class CalcAverage {
+	public double avgFirstN(int N) {
+		double avg = 0;
+		try {
+			if(N >= 1) {
+				int sum = 0;
+				for(int i=1; i<=N; i++) {
+					sum += i;
+				}
+				avg = sum / N;
+			}
+			else {
+				IllegalArgumentException obj = new IllegalArgumentException();
+				throw obj;
+			}
+		}catch(IllegalArgumentException e){
+			System.out.println("Exception accurs as : " + e);
+		}
+		return avg;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CalcAverage c = new CalcAverage();
+		double result = c.avgFirstN(6);
+		System.out.println(result);
+	}
+
+}

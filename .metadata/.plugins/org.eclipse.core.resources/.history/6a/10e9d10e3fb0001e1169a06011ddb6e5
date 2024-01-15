@@ -1,0 +1,36 @@
+package com.cybage;
+
+class Employee{
+	int id;
+	String name;
+	String designation;
+	float salary;
+	
+//	constructor -- defualt
+	Employee(){
+		System.out.println("Default constructor");
+	}
+	Employee(int id, String name, String des, float salary){
+//		System.out.println("Parameterised constructor"+a);
+		this.id = id;
+		this.name = name;
+		this.designation = des;
+		this.salary = salary;
+	}
+	
+	void employeeDetails() {
+		System.out.println("ID: "+id + "\n Name:"+name+"\nDesignation:"+designation+"\nSalary"+salary);
+	}
+}
+
+public class Inheritance {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee e = new Employee(21,"Swapnil","Software Developer",55000);
+		e.employeeDetails();
+		
+
+	}
+
+}

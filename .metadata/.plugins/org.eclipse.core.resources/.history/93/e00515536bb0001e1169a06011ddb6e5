@@ -1,0 +1,54 @@
+package com.abstraction;
+
+abstract class Game
+{
+	public void start() {
+		System.out.println("Game Started");
+	}
+	public void stop() {
+		System.out.println("Game Stopped");
+	}
+	abstract public void run();
+}
+
+class G1_Game extends Game
+{
+	public void run() {
+		System.out.println("Running 1");
+	}
+	public void gr() {
+		System.out.println("G1 Game Running!!!");
+	}
+}
+
+class G2_Game extends Game
+{
+	public void run() {
+		System.out.println("Running 1");
+	}
+	
+	public void g2p() {
+		System.out.println("G2 Game Running!!!");
+	}
+}
+
+public class AbstractClassExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Game g; 
+		g= new G1_Game();
+		g.start();
+		g.run();
+		g.stop();
+		
+		System.out.println("\n\n");
+		g= new G2_Game();
+		g.start();
+		g.run();
+		g.stop();
+
+	}
+
+}

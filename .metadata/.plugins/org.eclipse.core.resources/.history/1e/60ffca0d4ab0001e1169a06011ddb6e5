@@ -1,0 +1,37 @@
+package com.cybage;
+
+class Emp{
+	int id;
+	String name;
+	String designation;
+	float salary;
+	
+	public Emp(int id, String name, String designation) {
+		this.id = id;
+		this.name = name;
+		this.designation = designation;
+	}
+
+
+	// calling one contructor from another is called contructor chain.
+	Emp(int id, String name, String des, float salary){
+		
+		this.id = id;
+		this.name = name;
+		this.designation = des;
+		this.salary = salary;
+	}
+	
+	void employeeDetails() {
+		System.out.println("ID: "+id + "\nName: "+name+"\nDesignation: "+designation+"\nSalary: "+salary);
+	}
+}
+
+public class Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

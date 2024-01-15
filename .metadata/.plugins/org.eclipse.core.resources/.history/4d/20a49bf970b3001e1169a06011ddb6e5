@@ -1,0 +1,5 @@
+package com.custom_exception;
+
+public class InsufficientBalanceException {
+
+}

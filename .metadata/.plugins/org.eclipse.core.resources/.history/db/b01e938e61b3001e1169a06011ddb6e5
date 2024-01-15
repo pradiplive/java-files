@@ -1,0 +1,40 @@
+package com.thread;
+
+class MyThread1 extends Thread 
+{
+	int count;
+	MyThread1(int count){
+		this.count = count;
+	}
+	@Override
+	public void run()//Runnable
+	{
+		for(int i=0; i<=10;i++)
+		{
+			System.out.println(i*5);
+			
+			try
+			{
+				Thread.sleep(count); //Non-Runnable
+			}catch (Exception e) {
+				System.out.println(e);
+			}
+		}
+	}
+}
+
+
+
+public class ThreadCreationUsingThreadClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyThread1 t1 = new MyThread1(2000);
+		MyThread1 t2 = new MyThread1(1000);
+		
+//		Ready-phase -- Ready Queue---T1|T2
+		t1.start();
+		t2.start();
+	}
+
+}

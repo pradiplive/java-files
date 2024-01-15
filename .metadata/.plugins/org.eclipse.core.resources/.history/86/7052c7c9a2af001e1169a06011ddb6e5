@@ -1,0 +1,17 @@
+package domo;
+public class first {
+
+	public first() {
+		// TODO Auto-generated constructor stub
+		System.out.println("Inside first function");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello world");
+		
+		
+
+	}
+
+}

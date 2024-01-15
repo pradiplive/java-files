@@ -1,0 +1,10 @@
+package com.exception_assignments;
+
+public class CalcAverage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

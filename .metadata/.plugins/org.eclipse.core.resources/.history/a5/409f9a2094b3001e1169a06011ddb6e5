@@ -1,0 +1,39 @@
+package com.assignments;
+
+import java.util.Scanner;
+
+class Book {
+	String bokName;
+	String authorName;
+	int Price;
+	public Book(String bokName, String authorName, int price) {
+		this.bokName = bokName;
+		this.authorName = authorName;
+		Price = price;
+	}
+	@Override
+	public String toString() {
+		return "Book [bokName=" + bokName + ", authorName=" + authorName + ", Price=" + Price + "]";
+	}
+	
+	
+}
+
+public class BookAssignment {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Book bk[] = new Book[5];
+		for(int i=0; i<5; i++) {
+			Scanner sc = new Scanner(System.in);
+			String bName = sc.next();
+			String aName = sc.next();
+			int price = sc.nextInt();
+			bk[i] = new Book(bName, aName, price);
+//			bk[i].toString();
+			System.out.println(bk[i]);
+		}
+	}
+
+}
+

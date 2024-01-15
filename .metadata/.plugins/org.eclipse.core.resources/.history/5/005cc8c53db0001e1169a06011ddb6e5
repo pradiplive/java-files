@@ -1,0 +1,14 @@
+package com.cybage;
+
+public class Inheritance {
+	
+	name;
+	String 
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,79 @@
+package com.abstraction;
+
+/*Interface: Like a class only created using interface keyworkd
+ * java 7--
+ * Interface all the methods implicitly public and abstract
+ * Can't create object of interface . But we can create reference of it.
+ * Which can be initialized to the object of implemented class
+ * 
+ * java 8--
+ * Interface can hold implementation of methods using Default and Static Keyword.
+ * 
+ * variables- all vairiable are public, static and final.
+ * */
+
+interface Gamee{
+	//static , public, final
+	int count = 8;
+	// public and abstract
+	void start();
+	void run();
+	void stop();
+	static void puase() {
+		System.out.println("Game Paused");
+	}
+	default void resume() {
+		System.out.println("Game Resumed");
+	}
+}
+class G1Game implements Gamee{
+	public  void start() {
+		System.out.println("G1 is start");
+	}
+	public  void run() {
+		System.out.println("G1 is run");
+	}
+	public  void stop() {
+		System.out.println("G1 is stop");
+	}
+}
+class G2Game implements Gamee{
+	public  void start() {
+		System.out.println("G2 is start");
+	}
+	public  void run() {
+		System.out.println("G2 is run");
+	}
+	public  void stop() {
+		System.out.println("G2 is stop");
+	}
+}
+
+public class InterfaceExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		Game g = new Game();	// error: cannot initialized object of interface
+		G1Game g1 = new G1Game();
+		g1.start();
+		g1.run();
+		Gamee.puase();
+		g1.stop();
+		
+		System.out.println("\n\n");
+		
+		Gamee g;
+		g = new G2Game();
+		g.start();
+		g.run();
+		g.resume();
+		g.stop();
+		
+		// variable of interface
+		Gamee.count = 10;
+		System.out.println(Gamee.count);
+		
+	}
+
+}
+

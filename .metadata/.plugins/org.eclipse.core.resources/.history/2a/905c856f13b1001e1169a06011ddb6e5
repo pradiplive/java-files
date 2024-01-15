@@ -1,0 +1,25 @@
+package com.polymorphism;
+
+/*
+ * final keyword: when we declare final method in parent,
+ * 				  we cannot override parent method inside child class 
+ * */
+
+final class ABC{
+	void show() {
+		System.out.println("Class ABC");
+	}
+}
+//class PQR extends ABC{
+//	void show() {
+//		System.out.println("Class PQR");
+//	}
+//}
+
+public class FinalMethodAndClass {
+	public static void main(String[] args) {
+		ABC a = new ABC();
+		a.show();
+	}
+
+}

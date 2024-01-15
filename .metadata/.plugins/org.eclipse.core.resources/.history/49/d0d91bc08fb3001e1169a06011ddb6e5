@@ -1,0 +1,52 @@
+package com.assignments;
+
+class Counter {
+	int count=30;
+	public synchronized void increment() {
+		count++;
+	}
+	public synchronized void decrement() {
+		count--;
+	}
+	public synchronized int getValue() {
+		return count;
+	}
+}
+
+class Incrementer extends Thread {
+	Counter c ;	// reference
+	public Incrementer(Counter c) {
+		this.c = c;
+	}
+	public void run() {
+		int i=0;
+		while(i<100) {
+			c.increment();
+			i++;
+		}
+	}
+}
+
+class Decrementer  extends Thread{
+	Counter c ;	// reference
+	public Decrementer(Counter c) {
+		this.c = c;
+	}
+	public void run() {
+		int i=0;
+		while(i<100) {
+			c.decrement();
+			i++;
+		}
+	}
+}
+
+public class Assignment2 {
+	public static void main(String[] args) {
+		Counter c = new Counter();
+		Incrementer inc = new Incrementer(c);
+		
+		Decrementer dec = new Decrementer(c);
+		
+	}
+}

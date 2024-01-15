@@ -1,0 +1,43 @@
+package com.aggregation;
+
+class Employee{
+	
+	int empCode;
+	String name, designation;
+	float salary;
+	Date dob; // reference
+	public Employee(int empCode, String name, String designation, float salary, Date dob) {
+		super();
+		this.empCode = empCode;
+		this.name = name;
+		this.designation = designation;
+		this.salary = salary;
+		this.dob = dob;		// object is created
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee "
+				+ "[" + 
+				"empCode=" + empCode + 
+				", name=" + name + 
+				", designation=" + designation + 
+				", salary=" + salary + 
+				", dob=" + dob + 
+				"]";
+	}
+	
+}
+
+public class AggrigationExample {
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Date d = new Date(01,06,2001);
+		Employee e = new Employee(28822, "Pradip","SDE", 20000, d);	// d object pass to Employee.This is call Aggregation.
+		System.out.println(e);
+	}
+
+}

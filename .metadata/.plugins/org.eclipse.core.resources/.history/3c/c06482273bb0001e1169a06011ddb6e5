@@ -1,0 +1,9 @@
+package com.cybage;
+
+public class ClassAndObjectExample {
+
+	public ClassAndObjectExample() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

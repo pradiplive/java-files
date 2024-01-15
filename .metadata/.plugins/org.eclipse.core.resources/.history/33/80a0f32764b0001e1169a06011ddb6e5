@@ -1,0 +1,33 @@
+package com.staticfinal;
+
+class Circle
+{
+	float pi = 3.14f;
+	float ans;
+	
+	
+	void circleArea(float r)
+	{
+		ans = pi *r * r ;
+		System.out.println("Area of the circle:"+ ans);
+	}
+	
+	void circleCircum(float r)
+	{
+		ans = 2* pi *r;
+		System.out.println("Cirle circum:"+ ans);
+	}
+}
+
+public class StaticVariableAndMethods {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Circle c = new Circle();
+		c.circleArea(5);
+		c.circleCircum(6);
+
+	}
+
+}

@@ -1,0 +1,57 @@
+package com.thread;
+
+class MyThread1 extends Thread 
+{
+	int count;
+//	int id;
+	MyThread1(int count,int id){
+		this.count = count;
+//		this.id = id;
+	}
+	@Override
+	public void run()//Runnable
+	{
+		for(int i=0; i<=10;i++)
+		{
+			System.out.println(Thread.currentThread().getName() + "\t" + i*5 + "\t" + Thread.currentThread().getPriority());
+			try
+			{
+				Thread.sleep(count); //Non-Runnable
+			}catch (Exception e) {
+				System.out.println(e);
+			}
+		}
+	}//terminate
+}
+
+
+
+public class ThreadCreationUsingThreadClass {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		MyThread1 t1 = new MyThread1(1000,1);
+		MyThread1 t2 = new MyThread1(1000,2);
+		MyThread1 t3 = new MyThread1(1000,2);
+		
+		/* public vvoid java.lang.Thread.setName(String name_of_the_thread
+		 * 
+		 * */
+		t1.setName("1st Thread");
+		t2.setName("2st Thread");
+		t3.setName("3st Thread");
+//		Ready-phase -- Ready Queue---T1|T2
+		
+//		priority
+		
+		t1.setPriority(Thread.MIN_PRIORITY);
+		t2.setPriority(Thread.MAX_PRIORITY);
+		t3.setPriority(7);
+		
+		t1.start();
+		t1.join();
+		t2.start();
+		t3.start();
+	}
+
+}

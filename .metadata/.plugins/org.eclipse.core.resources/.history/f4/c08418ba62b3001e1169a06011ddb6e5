@@ -1,0 +1,47 @@
+package com.thread;
+
+class MyThread1 extends Thread 
+{
+	int count;
+//	int id;
+	MyThread1(int count,int id){
+		this.count = count;
+//		this.id = id;
+	}
+	@Override
+	public void run()//Runnable
+	{
+		for(int i=0; i<=10;i++)
+		{
+			System.out.println(Thread.currentThread().getName() + "\t" + i*5);
+			try
+			{
+				Thread.sleep(count); //Non-Runnable
+			}catch (Exception e) {
+				System.out.println(e);
+			}
+		}
+	}//terminate
+}
+
+
+
+public class ThreadCreationUsingThreadClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyThread1 t1 = new MyThread1(2000,1);
+		MyThread1 t2 = new MyThread1(1000,2);
+		
+		/* public vvoid java.lang.Thread.setName(String name_of_the_thread
+		 * 
+		 * */
+		t1.setName("1st Thread");
+		t2.setName("2st Thread");
+		
+//		Ready-phase -- Ready Queue---T1|T2
+		t1.start();
+		t2.start();
+	}
+
+}

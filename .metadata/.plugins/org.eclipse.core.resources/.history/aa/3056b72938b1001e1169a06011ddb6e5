@@ -1,0 +1,10 @@
+package com.custom_exception;
+
+public class AgeOutOfRangeException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

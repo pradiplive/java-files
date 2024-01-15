@@ -1,0 +1,35 @@
+package com.cybage;
+
+class Book
+{
+	String bookName;
+	String authorName;
+	int price;
+	String publisher = "Navneet Publication";
+	
+	
+	public Book(String bookName, String authorName, int price) {
+//		super();
+		this.bookName = bookName;
+		this.authorName = authorName;
+		this.price = price;
+	}
+	
+	void show()
+	{
+		System.out.println("Book name:" + bookName + "\nAuthor Name:"+ authorName+ "\nPrice:"+ price+ "publisher:"+publisher);
+	}
+	
+	
+}
+
+public class FinalVariableExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Book bk = new Book("Java Program","Code with Harry",500);
+		bk.show();
+		
+	}
+
+}

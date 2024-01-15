@@ -1,0 +1,23 @@
+package com.cybage;
+
+class Abc {
+	int val= 400;
+	
+}
+
+class PQR extends Abc
+{
+	int val = 700;
+	void show()
+	{
+		System.out.println("Value is :"+ val);
+	}
+}
+
+public class SuperKeywordExample  
+{
+	public static void main(String[] args) {
+		
+		PQR pqr = new PQR();
+	}
+}

@@ -1,0 +1,23 @@
+package com.cybage;
+
+class circle{
+	float pi = 3.14f;
+	float print() {
+		return pi;
+	}
+}
+
+public class ClassAndObjectExample {
+
+	public ClassAndObjectExample() {
+		// TODO Auto-generated constructor stub
+	}
+	public static void main(String[] gg) {
+		
+		System.out.println(gg);
+		
+		circle c = new circle();
+		System.out.println(c.print());;
+	}
+
+}
