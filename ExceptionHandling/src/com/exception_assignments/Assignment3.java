@@ -36,5 +36,4 @@ public class Assignment3 {
 		acc.withdraw(10000);
 
 	}
-
 }
